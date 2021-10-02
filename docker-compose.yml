@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+  pricetracker:
+    container_name: pricetracker
+    image: pricetrakcer
+    build: .
+    ports:
+      - 8888:8888
+    volumes:
+      - ./ipynbs:/workspace/ipynbs
+    command: jupyter notebook --allow-root --ip=0.0.0.0 --no-browser 
