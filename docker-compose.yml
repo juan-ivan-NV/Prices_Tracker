@@ -1,12 +1,7 @@
-version: "3.0"
-
-services:
-  pricetracker:
-    container_name: pricetracker
-    image: pricetrakcer
+selenium:
     build: .
     ports:
-      - 8888:8888
+        - 4000:4000
     volumes:
-      - ./ipynbs:/workspace/ipynbs
-    command: jupyter notebook --allow-root --ip=0.0.0.0 --no-browser 
+        - ./data/:/data/
+    privileged: true
