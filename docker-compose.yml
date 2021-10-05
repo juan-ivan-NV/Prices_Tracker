@@ -5,3 +5,4 @@ selenium:
     volumes:
         - ./data/:/data/
     privileged: true
+    command: python3 example.py
