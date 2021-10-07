@@ -29,7 +29,7 @@ RUN FIREFOX_SETUP=firefox-setup.tar.bz2 && \
     wget -O $FIREFOX_SETUP "https://download.mozilla.org/?product=firefox-latest&os=linux64" && \
     tar xjf $FIREFOX_SETUP -C /opt/ && \
     ln -s /opt/firefox/firefox /usr/bin/firefox && \
-    rm $FIREFOX_SETUP
+    rm $FIREFOX_SETUPsudo docker run -it --entrypoint /bin/bash pricesudo docker run -it --entrypoint /bin/bash prices_tracker_seleniums_tracker_selenium
 
 
 # install chromedriver and google-chrome
@@ -69,8 +69,9 @@ ENV APP_HOME /usr/src/app
 WORKDIR /$APP_HOME
 
 COPY . $APP_HOME/
-COPY ./example.py /workspace/example.py
-WORKDIR /workspace
+#COPY ./example.py /workspace/example.py
+COPY ./example.py $APP_HOME/example.py
+#WORKDIR /workspace
 
 #CMD tail -f /dev/null
 #CMD python3 example.py

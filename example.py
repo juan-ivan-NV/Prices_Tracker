@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup # pip install beautifulsoup4
 import pandas as pd # pip install pandas
 
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0'
-FireFoxDriverPath = os.path.join(os.getcwd(), 'Drivers', 'geckodriver.exe')
+FireFoxDriverPath = os.path.join(os.getcwd(), 'geckodriver.exe')
 FireFoxProfile = webdriver.FirefoxProfile()
 FireFoxProfile.set_preference("general.useragent.override", user_agent)
 url = "https://www.ebay.com/"

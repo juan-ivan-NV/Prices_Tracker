@@ -2,5 +2,5 @@
 
 Docker image name: pricetracker
 
-update the image: docker-compose build
-run image shell: udo docker run -it --entrypoint /bin/bash prices_tracker_selenium
+update the image & run: sudo docker-compose build && docker-compose up -d
+run image shell: sudo docker run -it --entrypoint /bin/bash prices_tracker_selenium
